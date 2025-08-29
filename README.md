@@ -20,12 +20,12 @@ A professional, mobile-responsive landing page clone for the AI Wealth & Marketi
 ### Pages & Sections
 
 #### **Main Landing Page (index.html)**
-1. **Hero Section**: Bold headline with urgent CTA
-2. **Event Details**: Clear event information and exclusivity messaging
-3. **Authority Section**: Alicia Lyttle "The Queen of AI" bio and credentials
-4. **Transformation Section**: 5-Day Challenge benefits and outcomes grid
-5. **Testimonials**: Social proof from previous attendees
-6. **Final CTA**: Reinforced call-to-action
+1. **Hero Section**: Background image overlay with Dr. Stephen Akintayo's defining moment message
+2. **Event Details**: Background image overlay with June 20th, 2025 event information
+3. **Authority Section**: Background image overlay featuring Dr. Stephen Akintayo's credentials
+4. **Transformation Section**: Background image overlay with wealth-building benefits grid
+5. **Testimonials**: Background image overlay with social proof from attendees
+6. **Final CTA**: Background image overlay with reinforced call-to-action
 7. **Footer**: Professional links and disclaimers
 
 #### **VIP Upgrade Page (vip-upgrade.html)**
