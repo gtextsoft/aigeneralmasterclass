@@ -177,6 +177,115 @@ document.addEventListener('DOMContentLoaded', function() {
     setInterval(updateCountdown, 60000);
     updateCountdown(); // Initial call
     
+    // Countdown timer for thank you page
+    function updateThankYouCountdown() {
+        // Set the event date: June 20, 2025 at 10:00 AM EST
+        // Using a more reliable date format
+        const eventDate = new Date('2025-06-20T10:00:00-05:00').getTime();
+        const now = new Date().getTime();
+        const distance = eventDate - now;
+        
+        console.log('Countdown update:', {
+            eventDate: new Date(eventDate),
+            now: new Date(now),
+            distance: distance,
+            days: Math.floor(distance / (1000 * 60 * 60 * 24)),
+            hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+            minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
+            seconds: Math.floor((distance % (1000 * 60)) / 1000)
+        });
+        
+        if (distance > 0) {
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            // Update countdown elements if they exist
+            const daysElement = document.getElementById('days');
+            const hoursElement = document.getElementById('hours');
+            const minutesElement = document.getElementById('minutes');
+            const secondsElement = document.getElementById('seconds');
+            
+            console.log('Countdown elements found:', {
+                days: daysElement,
+                hours: hoursElement,
+                minutes: minutesElement,
+                seconds: secondsElement
+            });
+            
+            if (daysElement) daysElement.textContent = days.toString().padStart(2, '0');
+            if (hoursElement) hoursElement.textContent = hours.toString().padStart(2, '0');
+            if (minutesElement) minutesElement.textContent = minutes.toString().padStart(2, '0');
+            if (secondsElement) secondsElement.textContent = seconds.toString().padStart(2, '0');
+        } else {
+            // Event has passed
+            const countdownElements = document.querySelectorAll('.countdown-number');
+            countdownElements.forEach(element => {
+                element.textContent = '00';
+            });
+            
+            // Update the countdown message
+            const countdownMessage = document.querySelector('.countdown-card h2');
+            if (countdownMessage) {
+                countdownMessage.textContent = 'Event is Live Now!';
+            }
+        }
+    }
+    
+    // Test countdown function for debugging
+    function testCountdown() {
+        console.log('Testing countdown functionality...');
+        
+        // Test with a simple countdown to 1 minute from now
+        const testDate = new Date(Date.now() + 60000); // 1 minute from now
+        const now = new Date().getTime();
+        const distance = testDate.getTime() - now;
+        
+        if (distance > 0) {
+            const minutes = Math.floor(distance / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            console.log('Test countdown:', { minutes, seconds });
+            
+            // Update test elements
+            const minutesElement = document.getElementById('minutes');
+            const secondsElement = document.getElementById('seconds');
+            
+            if (minutesElement) minutesElement.textContent = minutes.toString().padStart(2, '0');
+            if (secondsElement) secondsElement.textContent = seconds.toString().padStart(2, '0');
+        }
+    }
+    
+    // Check if we're on the vip-upgrade page and initialize countdown
+    if (document.querySelector('.countdown-section')) {
+        console.log('Countdown section found, initializing...');
+        
+        // Check if countdown elements exist
+        const countdownElements = document.querySelectorAll('.countdown-number');
+        console.log('Found countdown elements:', countdownElements.length);
+        
+        // Update thank you countdown every second for real-time experience
+        setInterval(updateThankYouCountdown, 1000);
+        
+        // Initial thank you countdown update
+        updateThankYouCountdown();
+        
+        // Debug logging
+        console.log('Countdown initialized for vip-upgrade page');
+        console.log('Event date:', new Date('2025-06-20T10:00:00-05:00'));
+        console.log('Current time:', new Date());
+        
+        // Test countdown with a closer date to verify functionality
+        const testDate = new Date(Date.now() + 24 * 60 * 60 * 1000); // 24 hours from now
+        console.log('Test countdown to:', testDate);
+        
+        // Run test countdown to verify functionality
+        testCountdown();
+    } else {
+        console.log('Countdown section not found on this page');
+    }
+    
     // Add hover effects for interactive elements
     function addHoverEffects() {
         const benefitItems = document.querySelectorAll('.benefit-item');
@@ -205,6 +314,16 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize hover effects
     addHoverEffects();
+    
+    // Ensure countdown is initialized after DOM is fully loaded
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', function() {
+            if (document.querySelector('.countdown-section')) {
+                console.log('DOM loaded, initializing countdown...');
+                updateThankYouCountdown();
+            }
+        });
+    }
     
     // Form validation enhancement
     function enhanceFormValidation() {
