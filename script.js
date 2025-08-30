@@ -85,12 +85,12 @@ document.addEventListener('DOMContentLoaded', function() {
             <div style="text-align: center; padding: 2rem;">
                 <div style="font-size: 4rem; margin-bottom: 1rem;">🎉</div>
                 <h3 style="color: #059669; margin-bottom: 1rem;">Registration Successful!</h3>
-                <p style="color: #6b7280; margin-bottom: 1rem;">Thank you for securing your FREE seat at the AI Wealth & Marketing Summit 2025!</p>
+                <p style="color: #6b7280; margin-bottom: 1rem;">Thank you for securing your FREE seat at the AI General Masterclass 2025!</p>
                 <p style="color: #6b7280; margin-bottom: 2rem;">You will receive a confirmation email shortly with event details and login instructions.</p>
                 
                 <div style="margin-top: 2rem; padding: 1.5rem; background: #f0f9ff; border-radius: 10px; border: 2px solid #0ea5e9;">
                     <h4 style="color: #0c4a6e; margin-bottom: 1rem;">🚀 Want to Maximize Your Results?</h4>
-                    <p style="color: #0369a1; margin-bottom: 1.5rem;">Upgrade to VIP and unlock exclusive bonuses worth $1,000+ for just $47!</p>
+                    <p style="color: #0369a1; margin-bottom: 1.5rem;">Upgrade to VIP and unlock exclusive bonuses worth $497+ for just $97!</p>
                     <button class="cta-button" style="background: #f59e0b; margin-right: 1rem;" onclick="window.location.href='vip-upgrade.html'">Upgrade To VIP</button>
                     <button class="secondary-btn" onclick="closeModal()">Continue with Free Ticket</button>
                 </div>
@@ -269,7 +269,7 @@ document.addEventListener('DOMContentLoaded', function() {
     enhanceFormValidation();
     
     // Console log for debugging
-    console.log('AI Wealth & Marketing Summit 2025 - Landing Page Loaded Successfully!');
+    console.log('AI General Masterclass 2025 - Landing Page Loaded Successfully!');
     console.log('All interactive features are now active.');
     
     // VIP Page specific functionality
