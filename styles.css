@@ -466,6 +466,74 @@ p {
     font-size: 0.9rem;
 }
 
+/* Agenda Section Styling */
+.agenda-section .testimonials-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.agenda-section .testimonial-item {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+    border: 2px solid var(--gold);
+}
+
+.agenda-section .testimonial-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.agenda-section .module-number {
+    width: 60px;
+    height: 60px;
+    background: var(--gold);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 auto 1.5rem;
+    border: 3px solid var(--royal-blue);
+}
+
+.agenda-section .module-title {
+    color: var(--royal-blue);
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.agenda-section .module-points {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.agenda-section .module-points li {
+    color: var(--dark-gray);
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.6;
+}
+
+.agenda-section .module-points li:before {
+    content: "✓";
+    color: var(--gold);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
 /* Final CTA Section with Background Overlay */
 .final-cta-overlay {
     position: relative;
