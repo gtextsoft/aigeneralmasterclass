@@ -345,6 +345,59 @@ p {
     font-weight: 500;
 }
 
+/* Pain to Possibility Section Styling */
+.pain-question {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 1.5rem 0 1rem;
+    color: var(--black);
+}
+
+.pain-points {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.pain-points li {
+    margin-bottom: 1rem;
+    padding: 0.5rem 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--black);
+    font-weight: 600;
+}
+
+.possibility-intro {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 2rem 0 1rem;
+    color: var(--black);
+}
+
+.possibility-points {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.possibility-points li {
+    margin-bottom: 1rem;
+    padding: 0.5rem 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--black);
+    font-weight: 600;
+}
+
+.trust-phrase {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 2rem 0 0;
+    color: var(--black);
+    font-style: italic;
+}
+
 /* Success Message and VIP Upgrade Card Styling */
 .success-message {
     text-align: center;
