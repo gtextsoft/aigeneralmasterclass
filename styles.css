@@ -959,6 +959,9 @@ p {
     transition: all 0.3s ease;
     width: 100%;
     font-size: 1rem;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
 }
 
 .vip-upgrade-btn:hover {
@@ -1128,6 +1131,9 @@ p {
     margin-bottom: 1.5rem;
     border-radius: 50px;
     box-shadow: 0 8px 25px rgba(30, 58, 138, 0.3);
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
 }
 
 .large-vip-btn:hover {
@@ -1277,6 +1283,11 @@ p {
     padding: 20px 40px;
     border-radius: 50px;
     box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .primary-cta:hover {
