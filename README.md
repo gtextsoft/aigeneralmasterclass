@@ -1,6 +1,6 @@
-# AI Wealth & Marketing Summit 2025 - Landing Page Clone
+# AI General Masterclass 2025 - Landing Page Clone
 
-A professional, mobile-responsive landing page clone for the AI Wealth & Marketing Summit 2025, built with HTML, CSS, and JavaScript.
+A professional, mobile-responsive landing page clone for the AI General Masterclass 2025, built with HTML, CSS, and JavaScript.
 
 ## 🚀 Features
 
