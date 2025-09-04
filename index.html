@@ -464,11 +464,6 @@
                     <button @click="initiateCheckout" class="cta-button text-white text-2xl font-bold py-6 px-12 rounded-lg w-full mb-4">
                         🚀 SECURE MY SPOT NOW — $999
                     </button>
-                    
-                    <div class="flex items-center justify-center space-x-4 text-sm text-gray-300">
-                        <i class="fas fa-lock"></i>
-                        <span>Secure checkout • 30-day guarantee</span>
-                    </div>
                 </div>
             </div>
         </div>
@@ -622,10 +617,6 @@
                 <button @click="initiateCheckout" class="cta-button text-white text-2xl font-bold py-6 px-12 rounded-lg pulse-animation">
                     BECOME A CERTIFIED AI CONSULTANT — $999 →
                 </button>
-                
-                <p class="text-sm text-gray-300 mt-4">
-                    <i class="fas fa-lock"></i> Secure checkout • 30-day guarantee • Lifetime access
-                </p>
             </div>
         </div>
     </section>
@@ -800,8 +791,8 @@
                         });
                     }
                     
-                    // Simulate checkout process
-                    alert('Redirecting to secure checkout...\n\nIn a real implementation, this would redirect to your payment processor (Stripe, PayPal, etc.)');
+                    // Redirect to payment page
+                    window.open('https://pay.gtextglobal.com/aibusiness/', '_blank');
                     
                     // Reset exit intent
                     this.exitIntentTriggered = false;
