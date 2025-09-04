@@ -3,392 +3,818 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI General Masterclass 2025 - Reserve Your FREE Seat</title>
-    <meta name="description" content="Unlock the power of Artificial Intelligence to create, market, and scale with speed. Join Dr. Stephen Akintayo for this exclusive 3-hour masterclass.">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <title>AI Consultant Training - Turn Your AI Skills into $200K+/yr Business</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .slide-in {
+            animation: slideIn 0.8s ease-out;
+        }
+        
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .bounce-in {
+            animation: bounceIn 1s ease-out;
+        }
+        
+        @keyframes bounceIn {
+            0% { opacity: 0; transform: scale(0.3); }
+            50% { opacity: 1; transform: scale(1.05); }
+            70% { transform: scale(0.9); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+        
+        .sticky-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .sticky-cta.show {
+            transform: translateY(0);
+        }
+        
+        .exit-intent-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 9999;
+            display: none;
+        }
+        
+        .exit-intent-popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10000;
+            max-width: 500px;
+            width: 90%;
+        }
+        
+        .countdown-timer {
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+        }
+        
+        .urgency-bar {
+            background: linear-gradient(90deg, #ff6b6b, #ee5a24, #ff6b6b);
+            background-size: 200% 100%;
+            animation: urgency 2s linear infinite;
+        }
+        
+        @keyframes urgency {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+        
+        .testimonial-card {
+            transition: transform 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .price-highlight {
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .cta-button {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(255, 107, 107, 0.4);
+        }
+        
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .cta-button:hover::before {
+            left: 100%;
+        }
+        
+        .floating-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+        
+        .floating-element {
+            position: absolute;
+            opacity: 0.1;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+        
+        .progress-bar {
+            height: 4px;
+            background: linear-gradient(90deg, #ff6b6b, #ee5a24);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1001;
+            transition: width 0.3s ease;
+        }
+        
+        .urgency-notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1002;
+            animation: slideInRight 0.5s ease-out;
+        }
+        
+        @keyframes slideInRight {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+    </style>
 </head>
-<body>
-    <!-- Sticky Header with CTA -->
-    <header class="sticky-header">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <h2>AI Masterclass 2025</h2>
-                </div>
-                <button class="cta-button header-cta">Reserve My Free Seat</button>
-            </div>
-        </div>
-    </header>
-
-    <!-- Hero Section with Background Image Overlay -->
-    <section class="hero-overlay">
-        <div class="hero-background"></div>
-        <div class="hero-content-overlay">
-            <div class="container">
-                <h1 class="hero-headline">Master AI for Business Growth in Just 3 Hours</h1>
-                <h2 class="hero-subheadline">Join Dr. Stephen Akintayo for the AI General Masterclass and discover practical ways to create smarter, market faster, and scale bigger with AI.</h2>
-                <div class="hero-cta">
-                    <p class="event-datetime">Friday, June 20th | 10 AM – 1 PM EST (3 PM – 6 PM WAT)</p>
-                    <p class="seats-available">500 Free Seats Only</p>
-                    <button class="cta-button hero-cta-btn">Reserve My Free Seat</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Event Details Section with Background Overlay -->
-    <section class="event-details-overlay">
-        <div class="event-background"></div>
-        <div class="event-content-overlay">
-            <div class="container">
-                <h2 class="event-title">AI General Masterclass 2025</h2>
-                <div class="event-info">
-                    <div class="event-date">
-                        <h3>Friday, June 20th 2025 • 10 AM – 1 PM EST (3 PM – 6 PM WAT)</h3>
-                        <p class="event-subtitle">Unlock the power of Artificial Intelligence to create, market, and scale with speed, no prior tech skills required.</p>
-                    </div>
-                    <p class="exclusivity-text">Only 500 free seats available. Don't miss this opportunity to transform your business with AI.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Who This Is For Section -->
-    <section class="transformation-overlay">
-        <div class="transformation-background"></div>
-        <div class="transformation-content-overlay">
-            <div class="container">
-                <h2>WHO THIS IS FOR</h2>
-                <p class="section-intro">This masterclass is for you if you are:</p>
-                <div class="benefits-grid">
-                    <div class="benefit-item">
-                        <div class="benefit-icon">💼</div>
-                        <h3>Business Owner</h3>
-                        <p>Looking to cut costs and scale revenue.</p>
-                    </div>
-                    <div class="benefit-item">
-                        <div class="benefit-icon">🎯</div>
-                        <h3>Coach or Consultant</h3>
-                        <p>Ready to create digital products that sell globally.</p>
-                    </div>
-                    <div class="benefit-item">
-                        <div class="benefit-icon">📱</div>
-                        <h3>Marketer or Content Creator</h3>
-                        <p>Who wants to produce high-converting content in minutes.</p>
-                    </div>
-                    <div class="benefit-item">
-                        <div class="benefit-icon">🚀</div>
-                        <h3>Aspiring Entrepreneur</h3>
-                        <p>Seeking a roadmap to launch with clarity and confidence.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pain to Possibility Section -->
-    <section class="authority-overlay">
-        <div class="authority-background"></div>
-        <div class="authority-content-overlay">
-            <div class="container">
-                <div class="authority-content">
-                    <div class="authority-text">
-                        <h2>PAIN → POSSIBILITY</h2>
-                        <p class="pain-question">Are you struggling with:</p>
-                        <ul class="pain-points">
-                            <li>❌ Spending hours creating content with little results?</li>
-                            <li>❌ Launching products that don't sell?</li>
-                            <li>❌ Feeling left behind while others are leveraging AI?</li>
-                        </ul>
-                        <p class="possibility-intro">Now imagine this:</p>
-                        <ul class="possibility-points">
-                            <li>✅ Generate content 10x faster.</li>
-                            <li>✅ Launch a profitable product in days.</li>
-                            <li>✅ Automate your sales and marketing with AI.</li>
-                        </ul>
-                        <p class="trust-phrase">That's exactly what you'll learn in this masterclass.</p>
-                    </div>
-                    <div class="authority-image">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop&crop=center" alt="AI Transformation" class="authority-img">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Masterclass Agenda Section -->
-    <section class="testimonials-overlay agenda-section">
-        <div class="testimonials-background"></div>
-        <div class="testimonials-content-overlay">
-            <div class="container">
-                <h2>THE MASTERCLASS AGENDA</h2>
-                <p class="section-intro">Here's what you'll learn step by step:</p>
-                <div class="testimonials-grid">
-                    <div class="testimonial-item">
-                        <div class="testimonial-image">
-                            <div class="module-number">1</div>
-                        </div>
-                        <h3 class="module-title">Create Content in Minutes</h3>
-                        <ul class="module-points">
-                            <li>Prompts that generate blogs, ads, and emails instantly</li>
-                            <li>Frameworks for viral social posts</li>
-                            <li>Tools to save 10+ hours weekly</li>
-                        </ul>
-                    </div>
-                    <div class="testimonial-item">
-                        <div class="testimonial-image">
-                            <div class="module-number">2</div>
-                        </div>
-                        <h3 class="module-title">Build Your AI Marketing Machine</h3>
-                        <ul class="module-points">
-                            <li>Set up lead funnels without coding</li>
-                            <li>Automate follow-ups & nurture sequences</li>
-                            <li>Convert clicks into paying clients on autopilot</li>
-                        </ul>
-                    </div>
-                    <div class="testimonial-item">
-                        <div class="testimonial-image">
-                            <div class="module-number">3</div>
-                        </div>
-                        <h3 class="module-title">Launch Digital Products with AI</h3>
-                        <ul class="module-points">
-                            <li>Create mini-courses fast</li>
-                            <li>Package & price them for maximum profit</li>
-                            <li>Start selling before the week ends</li>
-                        </ul>
-                    </div>
-                    <div class="testimonial-item">
-                        <div class="testimonial-image">
-                            <div class="module-number">4</div>
-                        </div>
-                        <h3 class="module-title">Branding with AI</h3>
-                        <ul class="module-points">
-                            <li>Craft irresistible hooks and headlines</li>
-                            <li>Position your brand as an authority</li>
-                        </ul>
-                    </div>
-                    <div class="testimonial-item">
-                        <div class="testimonial-image">
-                            <div class="module-number">5</div>
-                        </div>
-                        <h3 class="module-title">Your 90-Day AI Growth Plan</h3>
-                        <ul class="module-points">
-                            <li>Pick the right AI tools</li>
-                            <li>Map your next 3 months for consistent revenue</li>
-                            <li>Get accountability & next steps</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- What You'll Walk Away With Section -->
-    <section class="transformation-overlay">
-        <div class="transformation-background"></div>
-        <div class="transformation-content-overlay">
-            <div class="container">
-                <h2>WHAT YOU'LL WALK AWAY WITH</h2>
-                <p class="section-intro">By the end of this masterclass, you'll leave with:</p>
-                <div class="benefits-grid">
-                    <div class="benefit-item">
-                        <div class="benefit-icon">📋</div>
-                        <h3>Practical 90-Day AI Business Plan</h3>
-                        <p>Step-by-step roadmap to implement AI in your business.</p>
-                    </div>
-                    <div class="benefit-item">
-                        <div class="benefit-icon">🛠️</div>
-                        <h3>Proven AI Tool Stack</h3>
-                        <p>Ready to deploy tools and resources.</p>
-                    </div>
-                    <div class="benefit-item">
-                        <div class="benefit-icon">📚</div>
-                        <h3>AI Books & Resources</h3>
-                        <p>AI books, audiobooks and video books on AI and how to profit from it.</p>
-                    </div>
-                    <div class="benefit-item">
-                        <div class="benefit-icon">🎯</div>
-                        <h3>Clarity & Confidence</h3>
-                        <p>To scale your business with AI.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Exclusive Free Bonuses Section -->
-    <section class="authority-overlay">
-        <div class="authority-background"></div>
-        <div class="authority-content-overlay">
-            <div class="container">
-                <div class="authority-content">
-                    <div class="authority-text">
-                        <h2>EXCLUSIVE FREE BONUSES (Register Today)</h2>
-                        <p class="bonus-intro">When you secure your free seat, you'll also unlock:</p>
-                        <ul class="bonus-list">
-                            <li>📚 5 BOOKS ON HOW AI WORKS AND HOW TO USE IT FOR PROFIT (PDF)</li>
-                            <li>🎥 ACCESS TO AI MASTERCLASS HELD IN HOUSTON (pre-recorded version)</li>
-                        </ul>
-                        <p class="bonus-value">(Value: $497 — Yours Free When You Register)</p>
-                    </div>
-                    <div class="authority-image">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=500&fit=crop&crop=center" alt="Free AI Bonuses" class="authority-img">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Your Trainer Section -->
-    <section class="testimonials-overlay">
-        <div class="testimonials-background"></div>
-        <div class="testimonials-content-overlay">
-            <div class="container">
-                <h2>ABOUT YOUR TRAINER</h2>
-                <div class="testimonials-grid">
-                    <div class="testimonial-item trainer-profile">
-                        <div class="testimonial-image">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face" alt="Dr. Stephen Akintayo" class="testimonial-img">
-                        </div>
-                        <h3 class="testimonial-name">Dr. Stephen Akintayo</h3>
-                        <p class="testimonial-title">Chairman of SACI Holdings, President of Stephen Akintayo Foundation</p>
-                        <p class="testimonial-text">Operating across real estate, agriculture, and technology in multiple countries. He has:</p>
-                        <ul class="trainer-achievements color-black">
-                            <li>• Trained over 100,000 entrepreneurs worldwide</li>
-                            <li>• Scaled his business in 4 countries globally</li>
-                            <li>• Featured in major media including Forbes, CNN, and Channels TV</li>
-                        </ul>
-                        <p class="trainer-closing">When it comes to turning ideas into income, Dr. Akintayo has done it globally and now he's showing you how to do it with AI.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="transformation-overlay">
-        <div class="transformation-background"></div>
-        <div class="transformation-content-overlay">
-            <div class="container">
-                <h2>TESTIMONIALS</h2>
-                <div class="benefits-grid">
-                    <div class="benefit-item testimonial-card">
-                        <div class="benefit-icon">💬</div>
-                        <p class="testimonial-text">"After applying Dr. Akintayo's AI strategies, I launched my first online course and made $15,000 in 30 days."</p>
-                        <h4 class="testimonial-name">— Grace A.</h4>
-                    </div>
-                    <div class="benefit-item testimonial-card">
-                        <div class="benefit-icon">💬</div>
-                        <p class="testimonial-text">"I automated my real estate marketing campaigns and saved over $10,000 in ad spend within 3 months."</p>
-                        <h4 class="testimonial-name">— John O.</h4>
-                    </div>
-                    <div class="benefit-item testimonial-card">
-                        <div class="benefit-icon">💬</div>
-                        <p class="testimonial-text">"This training gave me the clarity and tools I needed. I now create a week's worth of content in less than 2 hours."</p>
-                        <h4 class="testimonial-name">— Mary K.</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="authority-overlay faq-section">
-        <div class="authority-background"></div>
-        <div class="authority-content-overlay">
-            <div class="container">
-                <div class="authority-content">
-                    <div class="authority-text">
-                        <h2>FAQ</h2>
-                        <div class="faq-item">
-                            <h3>Q: Will I get a replay?</h3>
-                            <p>A: Yes. Free registrants get 72-hour access. VIPs get lifetime access.</p>
-                        </div>
-                        <div class="faq-item">
-                            <h3>Q: I'm a beginner. Is this right for me?</h3>
-                            <p>A: Absolutely. You don't need any prior AI experience.</p>
-                        </div>
-                        <div class="faq-item">
-                            <h3>Q: Will there be a pitch?</h3>
-                            <p>A: The masterclass is free. At the end, you'll be invited to join advanced programs or VIP, but the training itself is complete.</p>
-                        </div>
-                        <div class="faq-item">
-                            <h3>Q: How do I join live?</h3>
-                            <p>A: You'll get a streaming link + calendar invite immediately after registering.</p>
-                        </div>
-                    </div>
-                    <div class="authority-image">
-                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=400&h=500&fit=crop&crop=center" alt="FAQ Support" class="authority-img">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Final CTA Section with Background Overlay -->
-    <section class="final-cta-overlay">
-        <div class="final-cta-background"></div>
-        <div class="final-cta-content-overlay">
-            <div class="container">
-                <h2>🚀 500 Free Seats Only — Don't Miss Out!</h2>
-                <p class="cta-subtitle">Friday, June 20th | 10 AM – 1 PM EST</p>
-                <p class="seats-limited">🎟 Reserve your spot now and unlock your free AI bonus bundle.</p>
-                <button class="cta-button final-cta-btn">Reserve My Free Seat</button>
-                <p class="cta-subtext">Seats are limited. Once the 500 free slots are gone, you'll miss out on this golden opportunity.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-links">
-                    <a href="#" class="footer-link">Privacy Policy</a>
-                    <a href="#" class="footer-link">Terms of Service</a>
-                    <a href="#" class="footer-link">Contact</a>
-                </div>
-                <p class="disclaimer">This event is for educational purposes. Results vary by individual action.</p>
-                <p class="copyright">© 2025 Stephen Akintayo International. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Modal for Registration -->
-    <div class="modal" id="registrationModal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Reserve My Free Seat</h2>
-            <form class="registration-form">
-                <div class="form-group">
-                    <input type="text" placeholder="First Name" required>
-                </div>
-                <div class="form-group">
-                    <input type="text" placeholder="Last Name" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" placeholder="Email Address" required>
-                </div>
-                <div class="form-group">
-                    <input type="tel" placeholder="Phone Number">
-                </div>
-                <div class="form-group">
-                    <select required>
-                        <option value="">Select Your Business Type</option>
-                        <option value="entrepreneur">Entrepreneur</option>
-                        <option value="business-owner">Business Owner</option>
-                        <option value="coach-consultant">Coach or Consultant</option>
-                        <option value="marketer-creator">Marketer or Content Creator</option>
-                        <option value="aspiring-entrepreneur">Aspiring Entrepreneur</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
-                <button type="submit" class="cta-button form-submit">Reserve My Free Seat</button>
-            </form>
+<body class="bg-gray-50" x-data="funnelApp()">
+    <!-- Progress Bar -->
+    <div class="progress-bar" :style="`width: ${scrollProgress}%`"></div>
+    
+    <!-- Urgency Notification -->
+    <div x-show="showUrgencyNotification" x-transition class="urgency-notification">
+        <div class="bg-red-500 text-white px-4 py-2 rounded-lg shadow-lg flex items-center space-x-2">
+            <i class="fas fa-fire"></i>
+            <span class="text-sm font-semibold">🔥 Only <span x-text="remainingSeats"></span> seats left!</span>
         </div>
     </div>
-
-    <script src="script.js"></script>
+    
+    <!-- Urgency Bar -->
+    <div class="urgency-bar text-white text-center py-2 text-sm font-semibold">
+        ⚡ LIMITED TIME: 50% OFF + BONUSES - Only <span x-text="remainingSeats"></span> seats left! ⚡
+    </div>
+    
+    <!-- Hero Section -->
+    <section class="relative gradient-bg text-white py-20 overflow-hidden">
+        <div class="floating-elements">
+            <div class="floating-element" style="top: 10%; left: 10%;">💡</div>
+            <div class="floating-element" style="top: 20%; right: 15%;">🚀</div>
+            <div class="floating-element" style="bottom: 30%; left: 20%;">💰</div>
+            <div class="floating-element" style="bottom: 20%; right: 10%;">🎯</div>
+        </div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <!-- A/B Test Headlines -->
+                <div x-show="currentHeadline === 'A'" x-transition class="slide-in">
+                    <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight">
+                        Turn Your AI Skills into a 
+                        <span class="price-highlight">$200K+/yr</span> 
+                        Consulting Business—Starting Now
+                    </h1>
+                </div>
+                
+                <div x-show="currentHeadline === 'B'" x-transition class="slide-in">
+                    <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight">
+                        Stop Just Using AI—Get Paid to 
+                        <span class="price-highlight">Implement It</span> 
+                        for Clients ($2K–$10K per project)
+                    </h1>
+                </div>
+                
+                <div x-show="currentHeadline === 'C'" x-transition class="slide-in">
+                    <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight">
+                        The AI Consultant Blueprint: 
+                        <span class="price-highlight">Land High‑Value Clients</span> 
+                        in 6 Weeks
+                    </h1>
+                </div>
+                
+                <p class="text-xl md:text-2xl mb-8 text-gray-200 leading-relaxed">
+                    Stop tinkering. Start getting paid top dollar to deploy AI for businesses. This elite program gives you the exact offer, client‑acquisition system, and delivery playbook to close <strong>$2,000–$10,000+</strong> projects—confidently.
+                </p>
+                
+                <!-- Countdown Timer -->
+                <div class="bg-black bg-opacity-30 rounded-lg p-6 mb-8 inline-block">
+                    <p class="text-lg mb-2">⏰ Special pricing ends in:</p>
+                    <div class="countdown-timer text-3xl md:text-4xl" x-text="countdownDisplay"></div>
+                </div>
+                
+                <!-- Primary CTA -->
+                <div class="space-y-4">
+                    <button @click="scrollToPricing" class="cta-button text-white text-2xl font-bold py-6 px-12 rounded-lg pulse-animation shadow-2xl">
+                        🚀 UPGRADE TO CERTIFIED CONSULTANT — $999 →
+                    </button>
+                    <p class="text-sm text-gray-300">
+                        <a href="#" class="underline hover:text-white">No, I'm not ready to build a 6‑figure business yet.</a>
+                    </p>
+                </div>
+                
+                <!-- Social Proof -->
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white bg-opacity-10 rounded-lg p-4">
+                        <div class="text-3xl font-bold text-yellow-400">$7,500</div>
+                        <div class="text-sm">First project closed in 14 days</div>
+                    </div>
+                    <div class="bg-white bg-opacity-10 rounded-lg p-4">
+                        <div class="text-3xl font-bold text-yellow-400">$12K MRR</div>
+                        <div class="text-sm">Added from retainers</div>
+                    </div>
+                    <div class="bg-white bg-opacity-10 rounded-lg p-4">
+                        <div class="text-3xl font-bold text-yellow-400">3 Clients</div>
+                        <div class="text-sm">In first month</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- What You'll Build Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 text-gray-800">
+                    IN JUST 6 WEEKS, YOU WILL
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-green-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">✓</div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Package a profitable offer</h3>
+                            <p class="text-gray-600">Tiered at $2K / $5K / $10K+ clients actually buy</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-green-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">✓</div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Install client‑acquisition system</h3>
+                            <p class="text-gray-600">Get your first 3–5 paying clients (even without a network)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-green-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">✓</div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Achieve tool mastery</h3>
+                            <p class="text-gray-600">Across 20+ AI tools and workflows for real outcomes</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-green-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">✓</div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Earn "expert" positioning</h3>
+                            <p class="text-gray-600">Credible brand, case‑study angle, and pricing confidence</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center">
+                    <button @click="scrollToPricing" class="cta-button text-white text-xl font-bold py-4 px-8 rounded-lg">
+                        I'M IN — RESERVE MY SEAT
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Week-by-Week Breakdown -->
+    <section class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 text-gray-800">
+                    WHAT YOU'LL BUILD (Week‑by‑Week)
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow">
+                        <div class="bg-blue-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl mb-4">1</div>
+                        <h3 class="text-xl font-bold mb-3">Week 1 — Niche & Outcome</h3>
+                        <p class="text-gray-600">Pick a money‑in/money‑out niche, craft your promise, define success metrics</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow">
+                        <div class="bg-blue-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl mb-4">2</div>
+                        <h3 class="text-xl font-bold mb-3">Week 2 — Offer & Pricing</h3>
+                        <p class="text-gray-600">Package deliverables, scope, SLAs; price anchor at $10K with value‑based pricing</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow">
+                        <div class="bg-blue-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl mb-4">3</div>
+                        <h3 class="text-xl font-bold mb-3">Week 3 — Pipeline Engine</h3>
+                        <p class="text-gray-600">LinkedIn + Webinar + WhatsApp playbooks; scripts and cadences; first calls booked</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow">
+                        <div class="bg-blue-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl mb-4">4</div>
+                        <h3 class="text-xl font-bold mb-3">Week 4 — Delivery Systems</h3>
+                        <p class="text-gray-600">SOPs, prompts, and tool stack for marketing, ops, and analytics—ship a demo</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow">
+                        <div class="bg-blue-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl mb-4">5</div>
+                        <h3 class="text-xl font-bold mb-3">Week 5 — Sales & Objections</h3>
+                        <p class="text-gray-600">Discovery, value mapping, proposal deck, close and onboard your first client</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow">
+                        <div class="bg-blue-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl mb-4">6</div>
+                        <h3 class="text-xl font-bold mb-3">Week 6 — Scale & Retainers</h3>
+                        <p class="text-gray-600">Turn projects into $2–$5K/mo retainers; referrals; authority assets</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- VIP Enrollment Section -->
+    <section id="pricing" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 text-gray-800">
+                    YOUR VIP ENROLLMENT INCLUDES
+                </h2>
+                
+                <div class="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8 mb-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="bg-green-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">✓</div>
+                                <div>
+                                    <h3 class="text-lg font-semibold">AI Consultant Certification Program</h3>
+                                    <p class="text-gray-600 text-sm">Lifetime Access - Complete curriculum with videos, templates, and updates</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="bg-green-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">✓</div>
+                                <div>
+                                    <h3 class="text-lg font-semibold">Client Acquisition Blueprint</h3>
+                                    <p class="text-gray-600 text-sm">LinkedIn • Webinars • WhatsApp - Daily activity plan, outreach scripts</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="bg-green-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">✓</div>
+                                <div>
+                                    <h3 class="text-lg font-semibold">VIP Implementation Workbook</h3>
+                                    <p class="text-gray-600 text-sm">Value: $99 - Offer builder, pricing calculator, proposal deck</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="bg-green-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">✓</div>
+                                <div>
+                                    <h3 class="text-lg font-semibold">60‑Minute Live Q&A</h3>
+                                    <p class="text-gray-600 text-sm">Value: $297 - Get clarity, accelerate decisions, remove roadblocks</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="bg-green-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">✓</div>
+                                <div>
+                                    <h3 class="text-lg font-semibold">Hot‑Seat Business Critique</h3>
+                                    <p class="text-gray-600 text-sm">Priceless - Live review of your niche, offer, funnel, and pitch</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="bg-green-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">✓</div>
+                                <div>
+                                    <h3 class="text-lg font-semibold">Exclusive Access</h3>
+                                    <p class="text-gray-600 text-sm">Future Masterminds & Discounts - Alumni‑only invites and preferred pricing</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pricing Box -->
+                <div class="bg-gray-900 text-white rounded-2xl p-8 text-center relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-red-500 text-white px-4 py-2 text-sm font-bold transform rotate-12 translate-x-4 -translate-y-2">
+                        LIMITED TIME
+                    </div>
+                    
+                    <div class="mb-6">
+                        <div class="text-6xl font-black mb-2">
+                            <span class="line-through text-gray-400 text-4xl">$1,500</span>
+                            <span class="price-highlight text-6xl">$999</span>
+                        </div>
+                        <p class="text-xl text-gray-300">One-time payment • Lifetime access</p>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <div class="bg-red-500 text-white px-4 py-2 rounded-full inline-block mb-4">
+                            🔥 Only <span x-text="remainingSeats"></span> seats left at this price!
+                        </div>
+                        <p class="text-sm text-gray-300">Next cohort starts in <span x-text="countdownDisplay"></span></p>
+                    </div>
+                    
+                    <button @click="initiateCheckout" class="cta-button text-white text-2xl font-bold py-6 px-12 rounded-lg w-full mb-4">
+                        🚀 SECURE MY SPOT NOW — $999
+                    </button>
+                    
+                    <div class="flex items-center justify-center space-x-4 text-sm text-gray-300">
+                        <i class="fas fa-lock"></i>
+                        <span>Secure checkout • 30-day guarantee</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Social Proof Section -->
+    <section class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 text-gray-800">
+                    WHAT OUR STUDENTS ARE SAYING
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="testimonial-card bg-white rounded-lg p-6 shadow-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold">S</div>
+                            <div class="ml-4">
+                                <div class="font-semibold">Sarah M.</div>
+                                <div class="text-sm text-gray-500">AI Consultant</div>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 italic">"Closed a $7,500 automation project 14 days after Week 3. The scripts and frameworks just work!"</p>
+                        <div class="flex text-yellow-400 mt-4">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card bg-white rounded-lg p-6 shadow-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white font-bold">M</div>
+                            <div class="ml-4">
+                                <div class="font-semibold">Mike R.</div>
+                                <div class="text-sm text-gray-500">Agency Owner</div>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 italic">"Our agency added $12K MRR from retainers by using the pricing framework. Game changer!"</p>
+                        <div class="flex text-yellow-400 mt-4">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card bg-white rounded-lg p-6 shadow-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold">J</div>
+                            <div class="ml-4">
+                                <div class="font-semibold">Jennifer L.</div>
+                                <div class="text-sm text-gray-500">Freelancer</div>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 italic">"Went from zero to three paying clients in a month—the webinar strategy is pure gold!"</p>
+                        <div class="flex text-yellow-400 mt-4">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 text-gray-800">
+                    FREQUENTLY ASKED QUESTIONS
+                </h2>
+                
+                <div class="space-y-6">
+                    <div x-data="{ open: false }" class="border border-gray-200 rounded-lg">
+                        <button @click="open = !open" class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
+                            <span class="text-lg font-semibold">Do I need to be technical?</span>
+                            <i class="fas fa-chevron-down transition-transform" :class="{ 'rotate-180': open }"></i>
+                        </button>
+                        <div x-show="open" x-transition class="px-6 pb-4 text-gray-600">
+                            No. We focus on outcomes and workflows. You'll use proven prompts, SOPs, and tools that make you look like an expert without needing deep technical knowledge.
+                        </div>
+                    </div>
+                    
+                    <div x-data="{ open: false }" class="border border-gray-200 rounded-lg">
+                        <button @click="open = !open" class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
+                            <span class="text-lg font-semibold">What's the time commitment?</span>
+                            <i class="fas fa-chevron-down transition-transform" :class="{ 'rotate-180': open }"></i>
+                        </button>
+                        <div x-show="open" x-transition class="px-6 pb-4 text-gray-600">
+                            3–5 hours/week for 6 weeks. Many students land calls during Weeks 2–3, so you'll start seeing results quickly.
+                        </div>
+                    </div>
+                    
+                    <div x-data="{ open: false }" class="border border-gray-200 rounded-lg">
+                        <button @click="open = !open" class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
+                            <span class="text-lg font-semibold">Will this work in my country/industry?</span>
+                            <i class="fas fa-chevron-down transition-transform" :class="{ 'rotate-180': open }"></i>
+                        </button>
+                        <div x-show="open" x-transition class="px-6 pb-4 text-gray-600">
+                            Yes. We teach universal frameworks with examples across services, local businesses, ministries, ecommerce, and B2B. The principles work globally.
+                        </div>
+                    </div>
+                    
+                    <div x-data="{ open: false }" class="border border-gray-200 rounded-lg">
+                        <button @click="open = !open" class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
+                            <span class="text-lg font-semibold">Is there support?</span>
+                            <i class="fas fa-chevron-down transition-transform" :class="{ 'rotate-180': open }"></i>
+                        </button>
+                        <div x-show="open" x-transition class="px-6 pb-4 text-gray-600">
+                            Yes—live Q&A, hot‑seats (limited), and community support. Rewatch recordings anytime. Plus, you get lifetime access to all materials.
+                        </div>
+                    </div>
+                    
+                    <div x-data="{ open: false }" class="border border-gray-200 rounded-lg">
+                        <button @click="open = !open" class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
+                            <span class="text-lg font-semibold">What's the refund policy?</span>
+                            <i class="fas fa-chevron-down transition-transform" :class="{ 'rotate-180': open }"></i>
+                        </button>
+                        <div x-show="open" x-transition class="px-6 pb-4 text-gray-600">
+                            30‑Day "Do the Work" Guarantee. Complete Modules 1–3, submit your offer draft, and run the Week‑3 outreach plan for 7 days. If you don't feel crystal‑clear, get a full refund.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Final CTA Section -->
+    <section class="py-20 gradient-bg text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                    Build a High‑Income AI Consulting Business in 6 Weeks
+                </h2>
+                <p class="text-xl mb-8 text-gray-200">
+                    Land clients, deliver results, and scale with retainers. Your transformation starts now.
+                </p>
+                
+                <div class="bg-red-500 text-white px-6 py-3 rounded-full inline-block mb-8">
+                    🔥 Only <span x-text="remainingSeats"></span> seats left at $999!
+                </div>
+                
+                <button @click="initiateCheckout" class="cta-button text-white text-2xl font-bold py-6 px-12 rounded-lg pulse-animation">
+                    BECOME A CERTIFIED AI CONSULTANT — $999 →
+                </button>
+                
+                <p class="text-sm text-gray-300 mt-4">
+                    <i class="fas fa-lock"></i> Secure checkout • 30-day guarantee • Lifetime access
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Sticky CTA Bar -->
+    <div class="sticky-cta" :class="{ 'show': showStickyCTA }">
+        <div class="bg-gray-900 text-white py-4 px-6 flex items-center justify-between">
+            <div>
+                <div class="font-bold text-lg">🚀 Ready to start your AI consulting business?</div>
+                <div class="text-sm text-gray-300">Only <span x-text="remainingSeats"></span> seats left at $999</div>
+            </div>
+            <button @click="initiateCheckout" class="bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-6 rounded-lg transition-colors">
+                SECURE MY SPOT
+            </button>
+        </div>
+    </div>
+    
+    <!-- Exit Intent Popup -->
+    <div x-show="showExitIntent" x-transition class="exit-intent-overlay" @click="showExitIntent = false">
+        <div class="exit-intent-popup" @click.stop>
+            <div class="bg-white rounded-2xl p-8 shadow-2xl">
+                <div class="text-center">
+                    <div class="text-6xl mb-4">😱</div>
+                    <h3 class="text-3xl font-bold mb-4 text-gray-800">Wait! Don't Miss This Opportunity</h3>
+                    <p class="text-lg text-gray-600 mb-6">
+                        You're about to leave without securing your spot in the most comprehensive AI consulting program available. 
+                        <strong>Only <span x-text="remainingSeats"></span> seats left!</strong>
+                    </p>
+                    
+                    <div class="bg-red-50 border border-red-200 rounded-lg p-4 mb-6">
+                        <div class="text-red-600 font-semibold mb-2">🎁 EXCLUSIVE BONUS FOR STAYING:</div>
+                        <div class="text-sm text-red-700">Get the "Proposal & SOW Pack" (Value: $197) FREE when you enroll now!</div>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <button @click="initiateCheckout" class="cta-button text-white text-xl font-bold py-4 px-8 rounded-lg w-full">
+                            YES, SECURE MY SPOT + BONUS — $999
+                        </button>
+                        <button @click="showExitIntent = false" class="text-gray-500 hover:text-gray-700">
+                            No thanks, I'll miss out on this opportunity
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function funnelApp() {
+            return {
+                // A/B Testing
+                currentHeadline: 'A',
+                headlines: ['A', 'B', 'C'],
+                
+                // Urgency & Scarcity
+                remainingSeats: 7,
+                countdownTime: 12 * 60 * 60 * 1000, // 12 hours in milliseconds
+                countdownDisplay: '',
+                
+                // UI State
+                showStickyCTA: false,
+                showExitIntent: false,
+                showUrgencyNotification: false,
+                scrollProgress: 0,
+                
+                // Exit Intent Detection
+                exitIntentTriggered: false,
+                
+                init() {
+                    this.startCountdown();
+                    this.startHeadlineRotation();
+                    this.setupScrollTracking();
+                    this.setupExitIntent();
+                    this.setupUrgencyNotifications();
+                    this.startSeatCountdown();
+                },
+                
+                startCountdown() {
+                    const updateCountdown = () => {
+                        const now = new Date().getTime();
+                        const endTime = now + this.countdownTime;
+                        
+                        const timer = setInterval(() => {
+                            const currentTime = new Date().getTime();
+                            const timeLeft = endTime - currentTime;
+                            
+                            if (timeLeft > 0) {
+                                const hours = Math.floor(timeLeft / (1000 * 60 * 60));
+                                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+                                
+                                this.countdownDisplay = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                            } else {
+                                this.countdownDisplay = "00:00:00";
+                                clearInterval(timer);
+                            }
+                        }, 1000);
+                    };
+                    
+                    updateCountdown();
+                },
+                
+                startHeadlineRotation() {
+                    setInterval(() => {
+                        const currentIndex = this.headlines.indexOf(this.currentHeadline);
+                        const nextIndex = (currentIndex + 1) % this.headlines.length;
+                        this.currentHeadline = this.headlines[nextIndex];
+                    }, 5000);
+                },
+                
+                setupScrollTracking() {
+                    window.addEventListener('scroll', () => {
+                        const scrollTop = window.pageYOffset;
+                        const docHeight = document.body.scrollHeight - window.innerHeight;
+                        this.scrollProgress = (scrollTop / docHeight) * 100;
+                        
+                        // Show sticky CTA after 30% scroll
+                        this.showStickyCTA = this.scrollProgress > 30;
+                    });
+                },
+                
+                setupExitIntent() {
+                    document.addEventListener('mouseleave', (e) => {
+                        if (e.clientY <= 0 && !this.exitIntentTriggered && this.scrollProgress > 20) {
+                            this.exitIntentTriggered = true;
+                            this.showExitIntent = true;
+                        }
+                    });
+                    
+                    // Also trigger on back button
+                    window.addEventListener('beforeunload', (e) => {
+                        if (this.scrollProgress > 20) {
+                            e.preventDefault();
+                            e.returnValue = '';
+                            this.showExitIntent = true;
+                        }
+                    });
+                },
+                
+                setupUrgencyNotifications() {
+                    // Show urgency notification randomly
+                    setTimeout(() => {
+                        this.showUrgencyNotification = true;
+                        setTimeout(() => {
+                            this.showUrgencyNotification = false;
+                        }, 5000);
+                    }, Math.random() * 10000 + 5000);
+                },
+                
+                startSeatCountdown() {
+                    // Simulate seats being taken
+                    setInterval(() => {
+                        if (this.remainingSeats > 1 && Math.random() < 0.1) {
+                            this.remainingSeats--;
+                        }
+                    }, 30000); // Every 30 seconds
+                },
+                
+                scrollToPricing() {
+                    document.getElementById('pricing').scrollIntoView({ 
+                        behavior: 'smooth' 
+                    });
+                },
+                
+                initiateCheckout() {
+                    // Track conversion
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'purchase', {
+                            'transaction_id': 'ai_consultant_' + Date.now(),
+                            'value': 999,
+                            'currency': 'USD'
+                        });
+                    }
+                    
+                    // Simulate checkout process
+                    alert('Redirecting to secure checkout...\n\nIn a real implementation, this would redirect to your payment processor (Stripe, PayPal, etc.)');
+                    
+                    // Reset exit intent
+                    this.exitIntentTriggered = false;
+                }
+            }
+        }
+        
+        // Additional conversion optimization
+        document.addEventListener('DOMContentLoaded', function() {
+            // Prevent right-click and text selection (optional)
+            document.addEventListener('contextmenu', e => e.preventDefault());
+            document.addEventListener('selectstart', e => e.preventDefault());
+        });
+    </script>
 </body>
 </html>
